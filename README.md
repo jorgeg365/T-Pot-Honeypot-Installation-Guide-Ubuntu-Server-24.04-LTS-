@@ -137,3 +137,47 @@ Log in with:
 Username: The one you chose
 
 Password: The one you set during installation
+
+🧱 Optional: Setup Considerations
+🔒 Network Isolation
+Place the honeypot in a VLAN or DMZ
+
+Use firewalls to block access from the internal network
+
+📈 Log Management
+T-Pot includes the ELK Stack:
+
+Elasticsearch – stores logs
+
+Logstash – processes logs
+
+Kibana – visualizes logs
+
+You can also forward logs to a centralized SIEM.
+
+🪵 Disk Usage Tips
+T-Pot logs grow fast; configure log rotation
+
+Consider adding an external HDD or expanding the VM disk
+
+🔁 Step 6: Post-Install Tips
+✅ Check Docker Containers
+
+```bash
+docker ps
+```
+📄 Monitor Docker Logs
+see containers
+```bash
+journalctl -u docker.service
+```
+📊 Access Kibana Dashboard
+Open:
+
+```bash
+https://<your_vm_ip>:64297
+```
+use credentials when prompted
+
+
+
