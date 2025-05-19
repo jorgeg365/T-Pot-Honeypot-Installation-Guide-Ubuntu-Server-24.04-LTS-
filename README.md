@@ -185,7 +185,7 @@ Once you log in at `https://<your_vm_ip>:64297`, you’ll see the T-Pot Kibana d
 
 ### 🖥️ Kibana Main Dashboard
 
-![Kibana Main Dashboard](images/kibana.png)
+![Kibana Main Dashboard](images/kibana.PNG)
 
 ---
 
