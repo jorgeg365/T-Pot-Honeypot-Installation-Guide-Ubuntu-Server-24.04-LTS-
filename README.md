@@ -193,7 +193,7 @@ Once you log in at `https://<your_vm_ip>:64297`, you’ll see the T-Pot Kibana d
 
 You can dig into captured logs using the Kibana interface:
 
-![Elastic Logs View](images/elastic-logs.png)
+![Elastic Logs View](images/elastic-idle.PNG)
 
 ---
 
@@ -201,7 +201,7 @@ You can dig into captured logs using the Kibana interface:
 
 After installing T-Pot, I used **Zenmap (Nmap GUI)** to scan the VM’s IP to simulate attacker behavior.
 
-![Zenmap Nmap Results](images/zenmap-nmap-results.png)
+![Zenmap Nmap Results](images/nmap-tpotserver-ip.PNG)
 
 These actions triggered events visible in Elasticsearch, showing how T-Pot logs and detects network scans.
 
@@ -211,7 +211,7 @@ After running an Nmap scan on the T-Pot VM IP (using Zenmap or command line), th
 
 Below is a screenshot of the **Elastic Logs view** showing the Nmap scan events captured:
 
-![Elastic Logs View After Nmap Scan](images/elastic-logs-after-nmap.png)
+![Elastic Logs View After Nmap Scan](images/after-nmap.png)
 
 You can see details such as:
 
