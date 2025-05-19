@@ -222,6 +222,17 @@ You can see details such as:
 
 This visualization helps monitor and analyze attacker behavior on your honeypot.
 
+---
+
+## 🚀 Wrapping It Up: Your Honeypot Project in a Nutshell
+
+You’ve transformed a simple Ubuntu VM into a powerful honeypot platform with T-Pot, Elasticsearch, and Kibana—turning your setup into an effective tool for capturing and analyzing attacker behavior. With Zenmap scans triggering real-time logs, you now have a hands-on way to understand network threats and improve your security skills.
+
+This project combines practical tools and real data to give you a solid foundation in cybersecurity monitoring. Keep exploring, tweaking, and learning—your honeypot is ready to catch whatever comes next.
+
+Happy hunting!
+
+
 
 
 
