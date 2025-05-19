@@ -20,7 +20,7 @@ This guide installs T-Pot in a **Proxmox VM**, but it can be adapted for other e
 
 ## 🪟 Step 1: Prepare the Ubuntu VM
 
-1. **Create a VM** (in Proxmox or other hypervisor):
+1. **Create a VM** (in Proxmox or other hypervisor): I used Vmware VM
    - **OS:** Ubuntu Server 24.04 LTS (64-bit)
    - **RAM:** 8 GB or more
    - **CPU:** 2 cores or more
