@@ -88,5 +88,39 @@ docker-compose --version
 echo "Docker and Docker Compose installation completed successfully!"
 echo "You need to log out and back in for group changes to take effect."
 ```
+3. Run the Script
 
+```bash
+chmod +x install-docker.sh
+./install-docker.sh
+exit
+```
+## 🌐 Step 4: Download and Install T-Pot
+1. Install Git and Clone the Repository
+
+```bash
+sudo apt install git -y
+git clone https://github.com/telekom-security/tpotce
+cd tpotce
+```
+2. Start the Installation
+
+```bash
+sudo ./install.sh
+```
+During the installation:
+
+Choose installation type Standard
+
+Set a strong password for the tsec user
+
+The script will:
+
+Pull all required Docker images
+
+Set up honeypots
+
+Configure Kibana dashboards
+
+🕒 This step can take 10–45 minutes depending on your hardware and internet speed.
 
