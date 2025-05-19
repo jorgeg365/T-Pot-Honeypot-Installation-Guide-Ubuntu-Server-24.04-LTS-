@@ -179,5 +179,32 @@ https://<your_vm_ip>:64297
 ```
 use credentials when prompted
 
+## 📊 T-Pot Dashboard: Kibana & ELK Stack
+
+Once you log in at `https://<your_vm_ip>:64297`, you’ll see the T-Pot Kibana dashboard:
+
+### 🖥️ Kibana Main Dashboard
+
+![Kibana Main Dashboard](images/kibana-main.png)
+
+---
+
+### 📂 Elastic Stack Log View
+
+You can dig into captured logs using the Kibana interface:
+
+![Elastic Logs View](images/elastic-logs.png)
+
+---
+
+## 🔍 Zenmap/Nmap Scan Results
+
+After installing T-Pot, I used **Zenmap (Nmap GUI)** to scan the VM’s IP to simulate attacker behavior.
+
+![Zenmap Nmap Results](images/zenmap-nmap-results.png)
+
+These actions triggered events visible in Elasticsearch, showing how T-Pot logs and detects network scans.
+
+
 
 
