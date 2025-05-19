@@ -43,3 +43,50 @@ sudo apt autoremove -y
 ## 🐳 Step 3: Install Docker and Docker Compose
 
 1. Create Install Script
+
+```bash
+nano install-docker.sh
+```
+2. Paste the Following into the Script
+
+```bash
+#Update Package Index and Install Prerequisites
+echo "Updating package index and installing prerequisites..."
+sudo apt update
+sudo apt install -y ca-certificates curl gnupg lsb-release
+
+#Add Docker’s Official GPG Key and Repository
+echo "Adding Docker's official GPG key and setting up repository..."
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+#Install Docker Engine
+echo "Installing Docker Engine..."
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin
+
+#Add Current User to the Docker Group
+echo "Adding current user to the Docker group..."
+sudo usermod -aG docker $USER
+
+#Install Docker Compose
+echo "Installing Docker Compose..."
+DOCKER_COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+sudo curl -L "https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+#Verify Installation
+echo "Verifying Docker installation..."
+docker --version
+echo "Verifying Docker Compose installation..."
+docker-compose --version
+
+#Final Message
+echo "Docker and Docker Compose installation completed successfully!"
+echo "You need to log out and back in for group changes to take effect."
+```
+
+
