@@ -39,3 +39,7 @@ SSH into the VM or use the Proxmox console and run:
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt autoremove -y
+```
+## 🐳 Step 3: Install Docker and Docker Compose
+
+1. Create Install Script
