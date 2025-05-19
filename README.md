@@ -205,6 +205,24 @@ After installing T-Pot, I used **Zenmap (Nmap GUI)** to scan the VM’s IP to si
 
 These actions triggered events visible in Elasticsearch, showing how T-Pot logs and detects network scans.
 
+## 🔍 Elastic Stack: View Logs After Nmap Scan
+
+After running an Nmap scan on the T-Pot VM IP (using Zenmap or command line), the scan activity is captured and logged by T-Pot’s honeypot services. These logs are visible in the Elasticsearch backend via Kibana.
+
+Below is a screenshot of the **Elastic Logs view** showing the Nmap scan events captured:
+
+![Elastic Logs View After Nmap Scan](images/elastic-logs-after-nmap.png)
+
+You can see details such as:
+
+- Source IP address of the scan
+- Timestamps of the scan events
+- Protocols and ports targeted
+- Event severity and types
+
+This visualization helps monitor and analyze attacker behavior on your honeypot.
+
+
 
 
 
