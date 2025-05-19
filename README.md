@@ -112,7 +112,7 @@ During the installation:
 
 Choose installation type Standard
 
-Set a strong password for the tsec user
+Set a strong password for the user
 
 The script will:
 
@@ -124,3 +124,16 @@ Configure Kibana dashboards
 
 🕒 This step can take 10–45 minutes depending on your hardware and internet speed.
 
+🚀 Step 5: Access the Web Interface
+Once the installation finishes and the VM reboots:
+
+Open your browser and go to:
+
+```bash
+https://<your_vm_ip>:64297
+```
+Log in with:
+
+Username: The one you chose
+
+Password: The one you set during installation
